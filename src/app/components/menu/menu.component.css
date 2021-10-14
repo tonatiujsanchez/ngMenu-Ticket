@@ -1,0 +1,39 @@
+.contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-bottom: 40px;
+}
+.producto{
+    display: flex;
+    align-items: center;
+    background-color: #f3d5a8;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    
+    box-shadow: 2px 2px 4px #ddc29a;
+    cursor: pointer;
+    transition: all .1s;
+}
+.producto:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 4px 5px #ddc29a;
+}
+.producto:active{
+    background-color: #ffe7c3;
+}
+.producto p{
+    margin: 10px 0;
+    cursor: pointer;
+}
+.producto img{
+    margin-right: 10px;
+}
+.producto .info .nombre{
+    font-weight: 600;
+}
+.producto .info .precio{
+    font-weight: 900;
+    font-size: 16px;
+}

@@ -1,0 +1,16 @@
+.principal{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+
+    max-width: 1350px;
+    width: 90%;
+    margin: 0 auto;
+}
+.menu{
+    grid-column: 1/4;
+}
+.ticket{
+    grid-column: 4/5;
+    /* background-color: #fff6e3; */
+}

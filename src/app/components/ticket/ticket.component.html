@@ -1,0 +1,29 @@
+<h2>Pedido</h2>
+<div *ngIf="listaPedido.length <= 0" class="sin-pedido">
+    <p>Añade productos a tu pedido</p>
+</div>
+<div *ngIf="!(listaPedido.length <= 0)" class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Producto</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of listaPedido; let idx = index">
+                <td (click)="menosUno( idx )" class="cantidad">{{ producto.cantidad }}</td>
+                <td>{{ producto.nombre }}</td>
+                <td class="subtotal">{{ (producto.cantidad * producto.precio) | currency }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td class="subtotal">{{ total | currency }}</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

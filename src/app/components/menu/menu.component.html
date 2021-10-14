@@ -1,0 +1,10 @@
+<h2>{{ titulo }}</h2>
+<div class="contenedor-productos">
+  <div class="producto" *ngFor="let producto of productos" (click)="agregarProducto( producto )">
+      <img src="./assets/img/{{ titulo }}/{{producto.id}}.png" alt="" width="100px">
+      <div class="info">
+        <p class="nombre">{{ producto.nombre }}</p>
+        <p class="precio">{{ producto.precio | currency }}</p>
+      </div>
+  </div>
+</div>
